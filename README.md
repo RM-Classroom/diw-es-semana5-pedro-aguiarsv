@@ -20,11 +20,6 @@ Nessa atividade, você deverá montar a página inicial do projeto escolhido, a 
 
 <<  COLOQUE A IMAGEM AQUI >>
 
-![wireframe](/images/wireframe.png)
+![mobile](/images/mobile.png)
+![desktop](/images/desktop.png)
 
-
-## Print da home-page criada
-
-<<  COLOQUE A IMAGEM AQUI >>
-
-![site](/images/site.png)
