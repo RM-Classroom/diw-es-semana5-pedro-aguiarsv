@@ -1,0 +1,245 @@
+:root {
+    /* Cores */
+    --bg-color: #f0f2f5;
+    --sidebar-bg: #d9d9d9;
+    --white: #ffffff;
+    --border-dark: #1a1a1a;
+    --text-primary: #1a1a1a;
+    --text-muted: #4a4a4a;
+    --accent: #0d4f3c;
+    --accent-hover: #0a3d2e;
+    --hover-bg: #e8e8e8;
+    --search-bg: #8a8a8a;
+    --search-text: #ffffff;
+    --card-bg: #ffffff;
+    --main-bg: #fafafa;
+
+    /* Tipografia */
+    --font-family: 'Inter', sans-serif;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.5rem;
+    --font-2xl: 1.75rem;
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 800;
+    --line-height-tight: 1.25;
+    --line-height-body: 1.5;
+
+    /* Espaçamentos */
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.25rem;
+    --space-xl: 1.875rem;
+    --space-2xl: 2.5rem;
+    --header-height: 5rem;
+    --sidebar-width: 15rem;
+
+    /* Bordas */
+    --btn-radius: 20px;
+    --radius-md: 15px;
+    --radius-lg: 30px;
+    --border-width: 2px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-base);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-body);
+    color: var(--text-primary);
+    background-color: var(--bg-color);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
+    grid-template-rows: var(--header-height) 1fr;
+    min-height: 100vh;
+    gap: 0;
+}
+
+.main-header {
+    grid-column: 1 / -1;
+    background: var(--white);
+    border-bottom: var(--border-width) solid var(--border-dark);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-xl);
+}
+
+.logo {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-xl);
+    line-height: var(--line-height-tight);
+    color: var(--accent);
+    letter-spacing: -0.02em;
+}
+
+.sidebar-left {
+    background-color: var(--sidebar-bg);
+    border-right: var(--border-width) solid var(--border-dark);
+    padding: var(--space-2xl) var(--space-xl);
+}
+
+.nav-btn {
+    width: 100%;
+    padding: var(--space-lg) var(--space-md);
+    margin-bottom: var(--space-xl);
+    border: var(--border-width) solid var(--border-dark);
+    border-radius: var(--btn-radius);
+    background: var(--white);
+    font-family: inherit;
+    font-size: var(--font-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.nav-btn:hover {
+    background: var(--hover-bg);
+    transform: scale(1.02);
+}
+
+.main-content {
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    background-color: var(--main-bg);
+}
+
+.carrossel-section h2,
+.carrossel-box h2 {
+    font-size: var(--font-lg);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    color: var(--text-primary);
+}
+
+.carrossel-box {
+    width: 100%;
+    min-height: 11.25rem;
+    padding: var(--space-xl);
+    border: var(--border-width) solid var(--border-dark);
+    border-radius: var(--radius-md);
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.campeonatos-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    border: var(--border-width) solid var(--border-dark);
+    border-radius: var(--radius-lg);
+    background: var(--card-bg);
+}
+
+.camp-item {
+    border: var(--border-width) solid var(--border-dark);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    text-align: center;
+    font-size: var(--font-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    color: var(--text-muted);
+    min-width: 7.5rem;
+    flex: 1 1 auto;
+    max-width: 10rem;
+    background: var(--white);
+}
+
+.rankings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.rank-card {
+    border: var(--border-width) solid var(--border-dark);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--card-bg);
+}
+
+.rank-content {
+    min-height: 9.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl);
+    text-align: center;
+    font-size: var(--font-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-body);
+    color: var(--text-primary);
+}
+
+.view-all {
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    border: none;
+    border-top: var(--border-width) solid var(--border-dark);
+    background: var(--white);
+    font-family: inherit;
+    font-size: var(--font-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    color: var(--accent);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.view-all:hover {
+    background: var(--hover-bg);
+    color: var(--accent-hover);
+}
+
+.sidebar-right {
+    background-color: var(--sidebar-bg);
+    border-left: var(--border-width) solid var(--border-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.search-box {
+    background: var(--search-bg);
+    padding: var(--space-lg);
+    text-align: center;
+    font-size: var(--font-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    color: var(--search-text);
+    border-bottom: var(--border-width) solid var(--border-dark);
+}
+
+.calendario-box {
+    padding: var(--space-xl);
+    text-align: center;
+    flex-grow: 1;
+}
+
+.calendario-box h3 {
+    font-size: var(--font-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    color: var(--text-primary);
+}
