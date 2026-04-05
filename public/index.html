@@ -9,55 +9,75 @@
 </head>
 <body>
 
+<input type="checkbox" id="menu-drawer" class="menu-state" aria-hidden="true">
+
 <div class="container">
     <header class="main-header">
-        <div class="logo">LOGO / TÍTULO</div>
+        <div class="header-inner">
+            <label for="menu-drawer" class="menu-trigger" aria-label="Abrir ou fechar menu de navegação">
+                <span class="menu-icon" aria-hidden="true"></span>
+            </label>
+            <div class="logo">Portal Jiu-Jitsu</div>
+        </div>
     </header>
 
     <aside class="sidebar-left">
-        <nav>
-            <button class="nav-btn">Adicionar atletas</button>
-            <button class="nav-btn">Adicionar campeonato</button>
-            <button class="nav-btn">Todos os atletas</button>
-            <button class="nav-btn">Ranking de atletas</button>
-            <button class="nav-btn">Ranking de academias</button>
+        <nav class="main-nav" aria-label="Navegação principal">
+            <button type="button" class="nav-btn">Adicionar atletas</button>
+            <button type="button" class="nav-btn">Adicionar campeonato</button>
+            <button type="button" class="nav-btn">Todos os atletas</button>
+            <button type="button" class="nav-btn">Ranking de atletas</button>
+            <button type="button" class="nav-btn">Ranking de academias</button>
         </nav>
     </aside>
 
     <main class="main-content">
-        <section class="carrossel-section">
+        <section class="carrossel-section" aria-labelledby="carrossel-title">
             <div class="carrossel-box">
-                <h2>Carrossel dos atletas mais famosos</h2>
+                <h2 id="carrossel-title">Atletas em destaque</h2>
+                <div class="carrossel-strip">
+                    <div class="athlete-chip">Gordon Ryan</div>
+                    <div class="athlete-chip">Nicholas Meregali</div>
+                    <div class="athlete-chip">Beatriz Mesquita</div>
+                    <div class="athlete-chip">Craig Jones</div>
+                </div>
             </div>
         </section>
 
-        <section class="campeonatos-section">
+        <section class="campeonatos-section" aria-labelledby="camps-title">
+            <h2 id="camps-title" class="section-heading">Principais campeonatos</h2>
             <div class="campeonatos-row">
-                <div class="camp-item">Principais campeonatos</div>
-                <div class="camp-item">Principais campeonatos</div>
-                <div class="camp-item">Principais campeonatos</div>
+                <div class="camp-item">ADCC</div>
+                <div class="camp-item">Worlds IBJJF</div>
+                <div class="camp-item">Pan Americano</div>
             </div>
         </section>
 
-        <section class="rankings-grid">
-            <div class="rank-card">
+        <section class="rankings-grid" aria-label="Rankings em destaque">
+            <article class="rank-card">
                 <div class="rank-content">Top 5 Masculino Adulto Preta</div>
-                <button class="view-all">Ver todos</button>
-            </div>
-            <div class="rank-card">
+                <button type="button" class="view-all">Ver todos</button>
+            </article>
+            <article class="rank-card">
                 <div class="rank-content">Top 5 Feminino Adulto Preta</div>
-                <button class="view-all">Ver todos</button>
-            </div>
+                <button type="button" class="view-all">Ver todos</button>
+            </article>
         </section>
     </main>
 
-    <aside class="sidebar-right">
+    <aside class="sidebar-right" aria-label="Busca e calendário">
         <div class="search-box">
-            <span>Buscar atletas</span>
+            <label class="search-label" for="search-athletes">Buscar atletas</label>
+            <input type="search" id="search-athletes" class="search-input" placeholder="Nome ou academia…" autocomplete="off">
         </div>
         <div class="calendario-box">
             <h3>Calendário de campeonatos</h3>
-            </div>
+            <ul class="event-list">
+                <li><time datetime="2026-05-10">10 mai</time> — Open regional</li>
+                <li><time datetime="2026-06-02">02 jun</time> — Copa estadual</li>
+                <li><time datetime="2026-07-20">20 jul</time> — Nacional</li>
+            </ul>
+        </div>
     </aside>
 </div>
 
